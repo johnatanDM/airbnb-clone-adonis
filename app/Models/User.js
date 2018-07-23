@@ -4,6 +4,11 @@ const Model = use('Model')
 const Hash = use('Hash')
 
 class User extends Model {
+
+  properties () {
+    return this.hasMany('App/Models/Property')
+  }
+
   static boot () {
     super.boot()
 
